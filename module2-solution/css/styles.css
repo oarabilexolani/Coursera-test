@@ -1,0 +1,84 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.item {
+    border: 3px solid #000; 
+    margin: 10px;
+    padding: 15px;
+    box-sizing: border-box;
+    position: relative; 
+    overflow: hidden; 
+    background-color: lightgray;
+}
+
+.item-title {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 15px 25px; 
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    border: 1px solid #000; 
+}
+
+.item p {
+    margin-top: 50px; /* i did this to create space between the title and the text */
+}
+
+.chicken {
+    background-color: brown;
+}
+
+.beef {
+    background-color: red;
+}
+
+.sushi {
+    background-color: orange;
+}
+
+
+/* Mobile (up to 767px) */
+@media (max-width: 767px) {
+    .item {
+        width: 90%;
+    }
+    .item-title {
+        font-size: 1em; /* Reduce font size on smaller screens to prevent overflow */
+    }
+}
+
+/* Tablet (768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .item {
+        width: 45%;
+    }
+    .item:nth-child(3) {
+        width: 92%;
+        height: 190px;
+    }
+}
+
+/* Desktop (992px and up) */
+@media (min-width: 992px) {
+    .item {
+        width: 30%;
+    }
+}
